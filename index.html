@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sree Roshini 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <!-- Replace this link with your actual MP3 URL -->
+    <source src="https://example.com/soulmate.mp3" type="audio/mpeg">
+  </audio>
+
+  <canvas id="hearts"></canvas>
+
+  <div class="container">
+    <img src="file_00000000ddb0..." alt="Sree Roshini" class="photo"> <!-- Replace with your uploaded photo filename -->
+    <h1>Happy Birthday, Sree Roshini 🎂</h1>
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const text = `To my dearest best friend 💖
+
+You’ve been more than a friend — you’re family to me. 
+Your kindness, laughter, and energy brighten every single day. 
+Thank you for being you, and for being part of my life.
+
+May your year ahead be filled with love, joy, and endless memories.
+Happy Birthday, Sree Roshini! 🩷`;
+
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("message").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 45);
+      }
+    }
+
+    window.onload = () => {
+      document.querySelector(".photo").classList.add("fade-in");
+      setTimeout(typeWriter, 1000);
+    };
+  </script>
+</body>
+</html>
